@@ -43,9 +43,9 @@
 
 .container {
   position: relative;
-  width: 1200px;
-  height: 800px;
-  border: 1px solid black;
+  width: 1000px;
+  height: 600px;
+  border: 20px solid black;
   background-image: url("src/images/map.jpg");
   background-size: cover;
   background-position: center;
@@ -56,5 +56,9 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 150px;
+  bottom: 100px;
+}
+
+.coordinates {
+  position: absolute;
 }

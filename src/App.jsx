@@ -7,8 +7,8 @@ import "./App.css";
 const App = () => {
   const [isFlying, setIsFlying] = useState(false);
   const [planePosition, setPlanePosition] = useState({
-    x: 600,
-    y: 400,
+    x: 500,
+    y: 300,
   });
   const [direction, setDirection] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -55,11 +55,46 @@ const App = () => {
     setIsFlying(false);
     setDirection(0);
     setElapsedTime(0);
-    setPlanePosition({ x: 600, y: 400 });
+    setPlanePosition({ x: 500, y: 300 });
   };
 
   return (
     <div className="container">
+      <p
+        className="coordinates"
+        style={{ left: "50%", transform: "translateX(-50%)" }}
+      >
+        N 360°
+      </p>
+      <p
+        className="coordinates"
+        style={{
+          left: "0",
+          top: "50%",
+          writingMode: "vertical-rl",
+          transform: "rotate(180deg)",
+        }}
+      >
+        W 270°
+      </p>
+      <p
+        className="coordinates"
+        style={{
+          right: "0",
+          top: "50%",
+
+          writingMode: "vertical-rl",
+          transform: "rotate(180deg) ",
+        }}
+      >
+        E 90°
+      </p>
+      <p
+        className="coordinates"
+        style={{ left: "50%", bottom: "0", transform: "translateX(-50%)" }}
+      >
+        N 180°
+      </p>
       <img
         src={airplaneIcon}
         alt="Airplane"
@@ -72,7 +107,7 @@ const App = () => {
       />
 
       <button className="button" onClick={isFlying ? stopFlight : startFlight}>
-        {isFlying ? "Stop" : "Start"}
+        {isFlying ? "Стоп" : "Почати"}
       </button>
     </div>
   );
